@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TFI Buzz - Telugu cinema news, reviews and Tollywood updates.">
+  <title>TFI Buzz | Telugu Cinema</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#">TFI <span>BUZZ.</span></a>
+    <button id="menuBtn" aria-label="Toggle navigation">☰</button>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#news">Latest News</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#stars">Stars</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="tag">YOUR DAILY TOLLYWOOD FIX</p>
+        <h1>THE WORLD OF<br><span>TELUGU CINEMA.</span></h1>
+        <p>Movie news, reviews, celebrity stories and everything happening in Tollywood.</p>
+        <a href="#news" class="btn">EXPLORE STORIES ↗</a>
+      </div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="section-title">
+        <div>
+          <p class="tag">FRESH OFF THE SET</p>
+          <h2>LATEST <span>BUZZ.</span></h2>
+        </div>
+        <input id="search" type="search" placeholder="Search stories..." aria-label="Search stories">
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-category="All">All</button>
+        <button class="filter" data-category="News">News</button>
+        <button class="filter" data-category="Reviews">Reviews</button>
+        <button class="filter" data-category="Stars">Stars</button>
+        <button class="filter" data-category="Box Office">Box Office</button>
+      </div>
+
+      <div class="grid" id="articles">
+        <article class="card" data-category="News">
+          <div class="poster poster1">🎬</div>
+          <div class="card-body">
+            <p class="tag">TOLLYWOOD NEWS</p>
+            <h3>What's Next for Telugu Cinema?</h3>
+            <p>A look at emerging filmmaking trends, ambitious projects and fresh storytelling voices.</p>
+            <button class="read" data-title="What's Next for Telugu Cinema?" data-text="Explore the creative trends, new voices and filmmaking ideas shaping Telugu cinema. Add verified reporting and original interviews here.">READ STORY ↗</button>
+          </div>
+        </article>
+
+        <article class="card" data-category="Reviews">
+          <div class="poster poster2">🍿</div>
+          <div class="card-body">
+            <p class="tag">MOVIE REVIEWS</p>
+            <h3>Inside the Art of Movie Reviews</h3>
+            <p>Story, performances, music and direction: what makes a film worth discussing?</p>
+            <button class="read" data-title="Inside the Art of Movie Reviews" data-text="A thoughtful movie review discusses the screenplay, performances, direction, editing and music. Replace this sample with your original film review.">READ STORY ↗</button>
+          </div>
+        </article>
+
+        <article class="card" data-category="Stars">
+          <div class="poster poster3">🌟</div>
+          <div class="card-body">
+            <p class="tag">STAR STORIES</p>
+            <h3>The Craft Behind Stardom</h3>
+            <p>Discover the preparation and creative collaboration behind memorable performances.</p>
+            <button class="read" data-title="The Craft Behind Stardom" data-text="Great screen performances are shaped by preparation, writing, direction and collaboration. Add original interviews and verified details about the artist.">READ STORY ↗</button>
+          </div>
+        </article>
+
+        <article class="card" data-category="Box Office">
+          <div class="poster poster4">📈</div>
+          <div class="card-body">
+            <p class="tag">BOX OFFICE</p>
+            <h3>Understanding Box Office Numbers</h3>
+            <p>Worldwide gross, domestic collections and opening weekends explained simply.</p>
+            <button class="read" data-title="Understanding Box Office Numbers" data-text="Box office reports can differ by source. Always identify the source, reporting date and whether figures refer to gross collections or distributor share.">READ STORY ↗</button>
+          </div>
+        </article>
+
+        <article class="card" data-category="News">
+          <div class="poster poster5">🎥</div>
+          <div class="card-body">
+            <p class="tag">BEHIND THE SCENES</p>
+            <h3>How a Film Comes Together</h3>
+            <p>From a script to the big screen, explore the people who bring stories to life.</p>
+            <button class="read" data-title="How a Film Comes Together" data-text="Filmmaking involves writers, directors, performers, cinematographers, editors, composers and many more specialists. Use this space for a behind-the-scenes feature.">READ STORY ↗</button>
+          </div>
+        </article>
+
+        <article class="card" data-category="Stars">
+          <div class="poster poster6">🎭</div>
+          <div class="card-body">
+            <p class="tag">CINEMA CULTURE</p>
+            <h3>The Fans Who Make Cinema Special</h3>
+            <p>Celebrating the energy, traditions and conversations of Telugu movie fans.</p>
+            <button class="read" data-title="The Fans Who Make Cinema Special" data-text="Film culture extends beyond theatres through fan communities, music, celebrations and conversations. Add your own stories and perspectives.">READ STORY ↗</button>
+          </div>
+        </article>
+      </div>
+      <p id="empty" hidden>No stories found. Try another search.</p>
+    </section>
+
+    <section class="quote" id="reviews">
+      <p class="tag">MORE THAN JUST MOVIES</p>
+      <h2>EVERY FILM HAS A STORY.<br><span>EVERY FAN HAS A VOICE.</span></h2>
+      <p>Independent perspectives on the cinema we love.</p>
+    </section>
+
+    <section class="newsletter" id="stars">
+      <p class="tag">JOIN THE BUZZ</p>
+      <h2>NEVER MISS A <span>STORY.</span></h2>
+      <p>Follow TFI Buzz for Telugu cinema updates and fresh articles.</p>
+      <a class="btn" href="#news">EXPLORE ARTICLES ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="#">TFI <span>BUZZ.</span></a>
+    <p>Made for the love of Telugu cinema.</p>
+    <small>© <span id="year"></span> TFI Buzz. Independent fan blog.</small>
+  </footer>
+
+  <dialog id="articleDialog">
+    <button id="closeDialog" class="close" aria-label="Close">×</button>
+    <p class="tag">TFI BUZZ STORY</p>
+    <h2 id="dialogTitle"></h2>
+    <p id="dialogText"></p>
+    <small>Sample content — add original, fact-checked reporting before publishing.</small>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
